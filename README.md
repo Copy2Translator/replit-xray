@@ -1,40 +1,36 @@
 
-## Replit容器部署xray核心代理
-### 详见[视频教程](https://www.youtube.com/playlist?list=PLMgly2AulGG-peT3CZoJFY68KbVg_D_lB)
------------------------------------------------------------------------------------
-### 提示：新建项目名称勿出现xray/v2ray等任何的协议字样，大流量使用必被限制！
-### 2023.3.31更新：
-#### 0、恢复replit官方平台在线fork功能，[项目地址](https://replit.com/@ygkkkk?tab=repls)，怎么操作？不用说了吧？
+## 2024更新：Replit容器部署xray核心五合一代理
 
-1、分享网页链接格式：replit域名地址/变量uuid值.html
+## [查看相关教程及视频说明](https://ygkkk.blogspot.com/2022/12/replit-xray-vmess-vless-trojan-shadowsocks.html)
 
-2、伪装网页默认为随机，可设置www变量指定伪装网页（取值范围1-9）
+### 安装方式：
 
-3、分享页面中的三大协议支持一键复制链接
+方式一、replit平台fork： replit.com/@yonggekkk
 
-4、如果选择的是fork项目安装方式，每次点击RUN会自动拉取github备份的最新脚本
+方式二、本地上传（强烈推荐）：
 
---------------------------------------------------------------------------------
-
-### 本地上传操作流程：
-
-点击首页右上角蓝色加号New Repl，搜索模版：Blank Repl，随意输入项目名称Title（不要出现代理协议的任何字眼），点击创建Create Repl，然后下载Github备份地址中的压缩文件（vmvltrssso-nginx-pro），并解压。再把解压后的4个文件全部拖到左侧文件栏内进行覆盖，等待几十秒后提示覆盖点确定，最后点击RUN
+点击首页左上角+Create Repl或者右上角加号，搜索模版：Blank Repl，随意输入项目名称Title（不要出现代理协议的任何字眼），点击创建Create Repl，然后下载Github备份地址中的压缩文件（vmvltrssso.zip），并解压。再把解压后的4个文件全部拖到左侧文件栏内进行覆盖，等待几十秒后提示覆盖点确定，最后点击RUN。相关视频请看博客说明
 
 --------------------------------------------------------------------------------------------
-#### 以下变量都为非必选变量，按需求添加（点击replit左侧Tools ，选择Secrets，详见教程）
+#### 除了ym变量，其余变量都为非必选变量，按需求添加（点击replit左侧Tools ，选择Secrets，详见视频教程）
 
-| 变量含义 | 变量名称| 变量规范值| 不添加该变量名称时，最终默认结果|
+| 变量含义 | 变量名称| 变量值| 不添加该变量说明|
 | :--- | :--- | :--- | :--- |
-| 各协议uuid或密码 | uuid |可在V2raN上随机生成，或者自定义uuid格式|随机生成的uuid|
+| replit默认域名 | ym |replit自动生成的域名，注意：不要带 https:// 且末尾不要带 / |首次运行后必填|
+| argo固定隧道token | argotoken |CF生成的一串token|可选，但必须与argoym变量同时存在|
+| argo固定隧道域名 | argoym |CF设置的隧道域名|可选，但必须与argotoken变量同时存在|
+| 各协议uuid(密码) | uuid |自定义uuid规定格式|随机生成的uuid|
 | 伪装网页 | www |数字1-9任选一个数字，共9个伪装网页可选择|随机伪装网页|
+|Xray1.4.3版支持苹果oneclick免费客户端|ver|任意字符|自动安装最新版Xray|
 |更新中……|更新中……|更新中……|更新中……|
 
+-----------------------------------------------------
+### 感谢你右上角的star🌟
+[![Stargazers over time](https://starchart.cc/yonggekkk/Replit-Xray.svg)](https://starchart.cc/yonggekkk/Replit-Xray)
 
-----------------------------------------------------------------------------------------------------
-![682aec9151f00ed0cba7e8c8026ff06](https://user-images.githubusercontent.com/121604513/229277596-6d6bfcd4-2f91-42d3-8ebd-e27cbe9619a1.png)
-![7682b5d1e8862ca8d1e119122e02c73](https://user-images.githubusercontent.com/121604513/229277602-f6311191-1044-4612-bdad-d45230462a31.png)
-![799d196f38533f309f049e8bb480533](https://user-images.githubusercontent.com/121604513/229277603-c17c8bef-d85c-4bc3-91d9-e73949913ede.png)
+---------------------------------------
+#### 声明：
 
+#### 该项目使用base64加密，可自行解密，介意者请勿使用，[加密原因在此](https://ygkkk.blogspot.com/2022/06/github.html)
 
-
-### 参考项目：[hiifeng](https://github.com/hiifeng/V2ray-for-Replit)
+#### 所有代码来源于Github社区与ChatGPT的整合；如您需要开源代码，请提Issues留下您的联系邮箱
